@@ -1,0 +1,3 @@
+[submodule "Installation"]
+	path = Installation
+	url = git@github.com:ATLAS-P/Installation.git
