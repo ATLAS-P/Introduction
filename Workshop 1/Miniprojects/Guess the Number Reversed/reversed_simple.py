@@ -1,14 +1,17 @@
 from math import floor
 
-def guess(min, max, reply = ''):
-    if reply != 'c':
-        new_guess = floor((min + max + 1) / 2)
+min = 0
+max = int(input())
 
-        print(new_guess)
-        reply = input()
+reply = ''
 
-        guess(new_guess if reply == 'h' else min,
-              new_guess if reply == 'l' else max,
-              reply)
+while reply != 'c':
+    guess = floor((min + max + 1) / 2)
 
-guess(0, int(input()))
+    print(guess)
+    reply = input()
+
+    if reply == 'h':
+        min = guess
+    elif reply == 'l':
+        max = guess
